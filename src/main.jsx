@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement : <Error/>//this is error element
+    errorElement : <Error/>//this is error element for handling bad or wrong URLs
   },
   {
     path: "profile/:name", // thiis the params
