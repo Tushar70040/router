@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from './App.jsx'
 import Spinach from './spinach.jsx'
 import Popeye from './popeye.jsx'
+import Default from './default.jsx'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     path: "profile",
     element: <Profile />,
     children:[
+      {index:true,
+        element:<Default/>
+        
+      },
       {
         path:"spinach",
         element : <Spinach />
