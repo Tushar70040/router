@@ -8,16 +8,18 @@ import Home from './App.jsx'
 import Spinach from './spinach.jsx'
 import Popeye from './popeye.jsx'
 import Default from './default.jsx'
+import Error from './error.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement : <Error/>//this is error element
   },
   {
-    path: "profile",
+    path: "profile/:name", // thiis the params
     element: <Profile />,
-    children:[
+   /* children:[ //there the chhildren for nested router
       {index:true,
         element:<Default/>
         
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
         path:"popeye",
         element :<Popeye />
       },
-    ],
+    ],*/
   },
   {
     path:"about",

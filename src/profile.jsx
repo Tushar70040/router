@@ -1,5 +1,30 @@
-import { Outlet } from "react-router";
 
+import { useParams } from "react-router";
+import Spinach from "./spinach";
+import Default from "./default";
+import Popeye from "./popeye";
+//with params
+
+const Profile = () => {
+  const {name} = useParams();
+
+  return (
+    <div>
+      <h1>profile page</h1>
+      <h2> the profile is visited here:</h2>
+
+      {name=== "popeye" ? (<Popeye/>)
+       : name === "spinach" ? (<Spinach/>)
+       :(<Default/>)}
+    </div>
+  )
+
+}
+
+export default Profile;
+
+//without params
+/*
 const Profile = () => {
   return (
     <div>
@@ -11,6 +36,6 @@ const Profile = () => {
     </div>
     
   );
-};
+};*/
 
-export default Profile;
+
