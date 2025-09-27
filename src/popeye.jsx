@@ -1,4 +1,4 @@
-import {Link} from "react-router";
+import { Link } from "react-router";
 
 const Popeye = () => {
     return (
@@ -6,7 +6,7 @@ const Popeye = () => {
         <h2>hey! i am popeye  the sailor</h2>
         <Link to="/" > click here to go back to home page</Link>
         </>
-    )
+    );
 }
 export default Popeye;
 

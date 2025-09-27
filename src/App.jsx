@@ -1,4 +1,4 @@
-import {Link} from "react-router"
+import { Link } from "react-router";
 
 const Home = () => {
   return (
@@ -9,8 +9,8 @@ const Home = () => {
         <ul>
           <li>
           
-            <Link to="profile">Profile page</Link>
-            <Link to="about">about section</Link>
+            <Link to="profile">Profile----</Link>
+            <Link to="about">about</Link>
           </li>
         </ul>
       </nav>

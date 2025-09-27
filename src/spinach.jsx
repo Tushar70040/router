@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-const Spinach =()=>{
+const Spinach = () => {
     return(
         <>
         <h1> hi!! i'm Spinach</h1>

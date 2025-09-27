@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import Profile from './profile.jsx'
 import About from './about.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router";
@@ -17,14 +16,14 @@ const router = createBrowserRouter([
   {
     path: "profile",
     element: <Profile />,
-    child:[
+    children:[
       {
-        path:"popeye",
-        element : <Popeye />
+        path:"spinach",
+        element : <Spinach />
       },
       { 
-        path:"spinach",
-        element :<Spinach />
+        path:"popeye",
+        element :<Popeye />
       },
     ],
   },
