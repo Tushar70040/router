@@ -1,11 +1,12 @@
 
-import { useParams } from "react-router";
+//import { useParams } from "react-router";
 import Spinach from "./spinach";
 import Default from "./default";
 import Popeye from "./popeye";
+import { Link  ,Outlet} from "react-router";
 //with params
 
-const Profile = () => {
+/*const Profile = () => {
   const {name} = useParams();
 
   return (
@@ -19,12 +20,10 @@ const Profile = () => {
     </div>
   )
 
-}
-
-export default Profile;
+}*/
 
 //without params
-/*
+
 const Profile = () => {
   return (
     <div>
@@ -36,6 +35,8 @@ const Profile = () => {
     </div>
     
   );
-};*/
+};
 
+
+export default Profile;
 

@@ -8,9 +8,9 @@ const Home = () => {
       <nav>
         <ul>
           <li>
-          
             <Link to="profile">Profile----</Link>
             <Link to="about">about</Link>
+            
           </li>
         </ul>
       </nav>

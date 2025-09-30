@@ -3,14 +3,17 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Profile from './profile.jsx'
 import About from './about.jsx'
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider,Route,createRoutesFromElements } from "react-router";
 import Home from './App.jsx'
 import Spinach from './spinach.jsx'
 import Popeye from './popeye.jsx'
 import Default from './default.jsx'
 import Error from './error.jsx'
 
-const router = createBrowserRouter([
+
+
+
+/*(const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
@@ -33,12 +36,29 @@ const router = createBrowserRouter([
         element :<Popeye />
       },
     ],*/
-  },
+ /* },
   {
     path:"about",
     element:<About/>
   }
 ]);
+)*/
+
+
+//there is another method for creating path
+//we can also use the react-router-dom
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<Home />} errorElement={<Error/>}/>
+      <Route path='/profile' element={<Profile/>} >
+            <Route path="spinach" element={<Spinach />} />
+                  <Route path="popeye" element={<Popeye />} />
+      </Route>
+      <Route path="/about" element={<About />} />
+    </>
+  )
+);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
