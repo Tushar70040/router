@@ -10,6 +10,26 @@ import Popeye from './popeye.jsx'
 import Default from './default.jsx'
 import Error from './error.jsx'
 
+//there is another method for creating path
+//we can also use the react-router-dom
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<Home />} errorElement={<Error />} />
+      <Route path='/profile' element={<Profile />} >
+        <Route path="spinach" element={<Spinach />} />
+        <Route path="popeye" element={<Popeye />} />
+      </Route>
+      <Route path="/about" element={<About />} />
+    </>
+  )
+);
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>,
+)
+
 
 
 
@@ -22,7 +42,7 @@ import Error from './error.jsx'
   {
     path: "profile/:name", // thiis the params
     element: <Profile />,
-   /* children:[ //there the chhildren for nested router
+   /* children:[ //there the chhildren for nested router always use children keywords for nested child
       {index:true,
         element:<Default/>
         
@@ -45,23 +65,3 @@ import Error from './error.jsx'
 )*/
 
 
-//there is another method for creating path
-//we can also use the react-router-dom
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route path="/" element={<Home />} errorElement={<Error/>}/>
-      <Route path='/profile' element={<Profile/>} >
-            <Route path="spinach" element={<Spinach />} />
-                  <Route path="popeye" element={<Popeye />} />
-      </Route>
-      <Route path="/about" element={<About />} />
-    </>
-  )
-);
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
-)
